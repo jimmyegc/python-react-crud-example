@@ -16,6 +16,9 @@ DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 # Inicializar Flask
 app = Flask(__name__)
 
+# Habilitar CORS para todas las rutas y métodos
+CORS(app, resources={r"/*": {"origins": "*"}})
+
 # Configuración de MongoDB
 app.config["MONGO_URI"] = MONGO_URI
 mongo = PyMongo(app)
