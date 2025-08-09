@@ -13,7 +13,11 @@ export function useUser(userId) {
         if (!res.ok) throw new Error("Usuario no encontrado");
         return res.json();
       })
-      .then((data) => setUser(data))
+      .then((data) => {
+        setTimeout(() => {
+          setUser(data)  
+        }, 5000);        
+      })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, [userId]);

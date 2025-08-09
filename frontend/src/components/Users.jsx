@@ -56,6 +56,13 @@ export const Users = () => {
     setUsers(users.filter((u) => u._id !== id));
   }
 
+  const handleClear = () => {
+    setOperation(null)
+    setName('')
+    setEmail('')
+    setPassword('')
+  }
+
   useEffect(()=> {
     if(user) {      
       setName(user.name)
@@ -64,12 +71,13 @@ export const Users = () => {
     }
   }, [user])
 
-  if (loading) return <p>Cargando...</p>;
+  if (loading) return <div className="loader"></div>;
   if (error) return <p>Error: {error}</p>;
   
   return (<div className='container'>
-    <div>Users</div>
-    <button onClick={() => setOperation('create')}>New User</button>
+    <h2>Catálogo de Usuarios</h2>
+    <hr />
+    <button className='button' onClick={() => setOperation('create')}>New User</button>
     
     {operation != null && (
       <form onSubmit={handleSubmit}>
@@ -97,17 +105,27 @@ export const Users = () => {
             onChange={(e) => setPassword(e.target.value)}/>
           </label>
         </div>
-        <input type="submit" value="Enviar" />
+        <button 
+          className='button-outline'
+          onClick={handleClear}>Cancelar</button>
+        <button
+          className='button'
+          type="submit"
+        >
+          Guardar
+        </button>        
       </form>
     )}
     
-
-    <ul>
+    <ul className='user-list'>
         {users.map((u) => (
           <li key={u._id}>
-            {u.name} - {u.email}
-            <button onClick={() => handleEdit(u._id)}>Edit</button>
-            <button onClick={() => handleDelete(u._id)}>Delete</button>
+            <div>
+              <span className='username'>{u.name}</span><br />
+              <span className='user-email'>{u.email}</span>              
+            </div>
+            <button className='btn-action' onClick={() => handleEdit(u._id)}>Edit</button>
+            <button className='btn-action' onClick={() => handleDelete(u._id)}>Delete</button>            
           </li>
         ))}
       </ul>

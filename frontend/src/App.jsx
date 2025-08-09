@@ -8,6 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <header>
+        <h1>Mi Sitio Web</h1>
         <nav>
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
