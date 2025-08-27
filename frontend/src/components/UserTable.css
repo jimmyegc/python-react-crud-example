@@ -1,0 +1,66 @@
+.user-table-container {
+  padding: 20px;
+  background: #f9f9f9;
+  /* usa tu $gray-color de nmda si quieres */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: 'Montserrat', sans-serif;
+  /* según tu stack */
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.user-table th {
+  background: #29285A;
+  /* $secondary-color */
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-table tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.user-table tr:hover {
+  background: #EC5C2C22;
+  /* $primary-color con transparencia */
+}
+
+.btn-action {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-action.edit {
+  background: #F18C6B;
+  /* $third-color */
+  color: white;
+}
+
+.btn-action.delete {
+  background: #EC5C2C;
+  /* $primary-color */
+  color: white;
+}
+
+.btn-action:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}

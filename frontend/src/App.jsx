@@ -1,25 +1,48 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import { Home } from '../src/components/Home'
-import { About } from '../src/components/About'
-import { Users } from '../src/components/Users'
+import { HomePage } from './pages/HomePage'
+import { AboutPage } from './pages/AboutPage'
+import { UsersPage } from './pages/UsersPage'
+import { Logo } from './components/Logo'
+import { Container } from './components/ui'
+import { Layout } from "./layouts/Layout";
 
 function App() {
-  
+  const [open, setOpen] = useState(true);
+
   return (
     <BrowserRouter>
-      <header>
-        <h1>Mi Sitio Web</h1>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/users">Users</Link>
-        </nav>
-      </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about"element={<About />} />
-        <Route path="/users" element={<Users />} />
-      </Routes>
+      <Layout>
+        <Container size="lg">
+          {/* Header */}
+          {/*           <header className="layout-header">
+            <button className="menu-btn" onClick={() => setOpen(!open)}>
+              ☰
+            </button>
+            <h1 className="logo">Mi App</h1>
+          </header>
+          
+          <div className="layout-body">            
+            <aside className={`sidebar ${open ? "open" : "collapsed"}`}>
+              <nav>
+                <ul>
+                  <li><a href="/">🏠 Inicio</a></li>
+                  <li><a href="/dashboard">📊 Dashboard</a></li>
+                  <li><a href="/config">⚙️ Configuración</a></li>
+                </ul>
+              </nav>
+            </aside>            
+            <main className="layout-main">
+              <Container size="lg">hola</Container>
+            </main>
+          </div> */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/users" element={<UsersPage />} />
+          </Routes>
+        </Container>
+      </Layout>
     </BrowserRouter>
   )
 }

@@ -15,8 +15,8 @@ export function useUser(userId) {
       })
       .then((data) => {
         setTimeout(() => {
-          setUser(data)  
-        }, 5000);        
+          setUser(data)
+        }, 500);
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));

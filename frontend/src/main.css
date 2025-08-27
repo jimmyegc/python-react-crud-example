@@ -1,49 +1,69 @@
-/* 🎨 Variables de diseño */
-      :root {
-        /* Colores */
-        --color-primary: #2c3e50;
-        --color-secondary: #34495e;
-        --color-accent: #e67e22;
-        --color-neutral: #ecf0f1;
-        --color-text-dark: #2c3e50;
-        --color-text-light: #ffffff;
+/* 
+:root {  
+  --color-primary: #2c3e50;
+  --color-secondary: #34495e;
+  --color-accent: #e67e22;
+  --color-neutral: #ecf0f1;
+  --color-text-dark: #2c3e50;
+  --color-text-light: #ffffff;
 
-        /* Escala de espaciado */
-        --space-xxs: 0.25rem; /* 4px */
-        --space-xs: 0.5rem; /* 8px */
-        --space-sm: 0.75rem; /* 12px */
-        --space-md: 1rem; /* 16px */
-        --space-lg: 1.5rem; /* 24px */
-        --space-xl: 2rem; /* 32px */
-        --space-xxl: 3rem; /* 48px */
+  
+--space-xxs: 0.25rem;
 
-        /* Tipografía */
-        --font-xs: 0.75rem; /* 12px */
-        --font-sm: 0.875rem; /* 14px */
-        --font-md: 1rem; /* 16px */
-        --font-lg: 1.25rem; /* 20px */
-        --font-xl: 1.5rem; /* 24px */
-        --font-xxl: 2rem; /* 32px */
-      }
+--space-xs: 0.5rem;
 
-      /* 🔤 Estilos globales */
-      body {
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        font-size: var(--font-md);
-        background-color: var(--color-neutral);
-        color: var(--color-text-dark);
-        line-height: 1.5;
-      }
+--space-sm: 0.75rem;
 
-      header {
+--space-md: 1rem;
+
+--space-lg: 1.5rem;
+
+--space-xl: 2rem;
+
+--space-xxl: 3rem;
+
+
+
+--font-xs: 0.75rem;
+
+--font-sm: 0.875rem;
+
+--font-md: 1rem;
+
+--font-lg: 1.25rem;
+
+--font-xl: 1.5rem;
+
+--font-xxl: 2rem;
+
+
+--primary-color: #EC5C2C;
+--secondary-color: #29285A;
+--third-color: #F18C6B;
+--gray-color: #f9f9f9;
+--font-stack: 'Montserrat',
+sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-md);
+  background-color: var(--color-neutral);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+}
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #29285A; /* color de fondo oscuro */
-  color: white;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #29285A;
+
+color: white;
+font-family: 'Montserrat',
+sans-serif;
 }
 
 header h1 {
@@ -61,80 +81,77 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #EC5C2C; /* color naranja para hover */
+  color: #EC5C2C;
+
 }
 
 
-      h1 {
-        font-size: var(--font-xxl);        
-      }
+h1 {
+  font-size: var(--font-xxl);
+}
 
-      h2 {
-        font-size: var(--font-xl);
-      }
+h2 {
+  font-size: var(--font-xl);
+}
 
-      hr {
-        border: none;
-        height: 2px;
-        background: linear-gradient(90deg, #EC5C2C, #F18C6B);
-        margin: 1.5rem 0;
-        border-radius: 1px;
-        max-width: 100%;
-        opacity: 0.8;
-      }
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #EC5C2C, #F18C6B);
+  margin: 1.5rem 0;
+  border-radius: 1px;
+  max-width: 100%;
+  opacity: 0.8;
+}
 
-      /* 📦 Contenedor principal */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: var(--space-xl);
-      }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
 
-      /* 🃏 Card */
-      .card {
-        background-color: var(--color-neutral);
-        border: 2px solid var(--color-primary);
-        border-radius: 12px;
-        padding: var(--space-lg);
-        box-shadow: 0 8px 16px rgba(44, 62, 80, 0.1);
-        margin-bottom: var(--space-lg);
-        transition: box-shadow 0.3s ease;
-      }
+.card {
+  background-color: var(--color-neutral);
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  padding: var(--space-lg);
+  box-shadow: 0 8px 16px rgba(44, 62, 80, 0.1);
+  margin-bottom: var(--space-lg);
+  transition: box-shadow 0.3s ease;
+}
 
-      .card:hover {
-        box-shadow: 0 12px 24px rgba(44, 62, 80, 0.2);
-      }
+.card:hover {
+  box-shadow: 0 12px 24px rgba(44, 62, 80, 0.2);
+}
 
-      .card-title {
-        font-size: var(--font-xl);
-        font-weight: 700;
-        margin-bottom: var(--space-md);
-        color: var(--color-primary);
-      }
+.card-title {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
 
-      .card-text {
-        font-size: var(--font-md);
-        margin-bottom: var(--space-lg);
-      }
+.card-text {
+  font-size: var(--font-md);
+  margin-bottom: var(--space-lg);
+}
 
-      /* 🔘 Botón */
-      .button {
-        background-color: var(--color-accent);
-        color: var(--color-text-light);
-        border: none;
-        padding: var(--space-sm) var(--space-lg);
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: var(--font-md);
-        font-weight: 600;
-        transition: background-color 0.2s ease;
-      }
+.button {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--font-md);
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
 
-      .button:hover {
-        background-color: #cf6d17; /* tono más oscuro */
-      }
+.button:hover {
+  background-color: #cf6d17;
+}
 
-      /* Botón outline */
 .button-outline {
   background-color: transparent;
   color: var(--color-accent);
@@ -200,18 +217,19 @@ header nav a:hover {
 }
 
 .user-list li .btn-action {
-  background-color: var(--color-text-light); /* blanco para destacar */
-  border: 1.5px solid var(--color-accent);
-  color: var(--color-accent);
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
-  font-size: var(--font-sm);
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  margin-left: 0.8rem; /* separación entre botones */
-  min-width: 60px;
-  text-align: center;
+  background-color: var(--color-text-light);
+border: 1.5px solid var(--color-accent);
+color: var(--color-accent);
+padding: 0.25rem 0.6rem;
+border-radius: 6px;
+font-size: var(--font-sm);
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.2s ease,
+color 0.2s ease;
+margin-left: 0.8rem;
+min-width: 60px;
+text-align: center;
 }
 
 .user-list li:hover .btn-action {
@@ -219,31 +237,106 @@ header nav a:hover {
   color: var(--color-accent);
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 50px;
   aspect-ratio: 1;
   display: grid;
   border-radius: 50%;
   background:
-    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
-    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+    linear-gradient(0deg, rgb(0 0 0/50%) 30%, #0000 0 70%, rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0) 50%/100% 8%;
   background-repeat: no-repeat;
   animation: l23 1s infinite steps(12);
 }
+
 .loader::before,
 .loader::after {
-   content: "";
-   grid-area: 1/1;
-   border-radius: 50%;
-   background: inherit;
-   opacity: 0.915;
-   transform: rotate(30deg);
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
 }
+
 .loader::after {
-   opacity: 0.83;
-   transform: rotate(60deg);
+  opacity: 0.83;
+  transform: rotate(60deg);
 }
+
 @keyframes l23 {
-  100% {transform: rotate(1turn)}
+  100% {
+    transform: rotate(1turn)
+  }
 }
+
+form {
+  font-family: var(--font-stack);
+  background-color: var(--gray-color);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+form div {
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  width: 95%;
+  padding: 0.75rem;
+  border: 2px solid #b0b0c2;  
+border-radius: 6px;
+font-size: 1rem;
+outline: none;
+transition: border-color 0.3s ease,
+box-shadow 0.3s ease;
+}
+
+form input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(236, 92, 44, 0.15);
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c94d23;
+}
+
+.button-outline {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.button-outline:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+*/

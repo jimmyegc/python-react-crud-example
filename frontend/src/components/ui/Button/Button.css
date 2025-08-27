@@ -1,0 +1,52 @@
+.nmda-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Variantes */
+.nmda-button.default {
+  background: #f9f9f9;
+  color: #29285A;
+  border-color: #ccc;
+}
+
+.nmda-button.primary {
+  background: #EC5C2C;
+  color: #fff;
+  border-color: #EC5C2C;
+}
+
+.nmda-button.outline {
+  background: transparent;
+  color: #EC5C2C;
+  border-color: #EC5C2C;
+}
+
+/* Hover */
+.nmda-button:not(.disabled):hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Disabled */
+.nmda-button.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Icono */
+.button-icon {
+  display: inline-flex;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}

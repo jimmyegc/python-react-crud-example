@@ -8,7 +8,7 @@ export function useUsers() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${ API }/users`)
+    fetch(`${API}/users`)
       .then((res) => {
         if (!res.ok) throw new Error("Error al obtener usuarios");
         return res.json();

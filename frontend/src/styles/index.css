@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+
+  --color-primary: #EC5C2C;
+  --color-secondary: #29285A;
+  --color-third: #F18C6B;
+  --color-gray: #F9F9F9;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--font-md);
+  background-color: var(--color-neutral);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+}
+
+
+h2 {
+  /*font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;*/
+}
+
+@utility form {
+  @apply font-sans bg-gray p-8 rounded-xl max-w-sm mx-auto shadow-md;
+}
+
+@utility form-group {
+  @apply mb-6;
+}
+
+/*
+@utility btn {
+
+@apply inline-flex items-center justify-center px-[1.2rem] py-[0.6rem] text-[0.95rem] font-medium rounded-lg border-2 border-transparent cursor-pointer transition-all duration-200 ease-in-out font-sans;
+
+
+@utility btn default {
+  @appy btn bg-gray-500 text-secondary border-[#ccc];
+}
+
+@utility btn primary {
+  @apply btn bg-primary text-white hover:bg-third;
+}
+
+@utility btn-secondary {
+  @apply btn bg-secondary text-white hover:bg-primary;
+}
+
+@utility card {
+  @apply bg-gray p-6 rounded-2xl shadow-md;
+}
+
+*/
