@@ -30,7 +30,7 @@ export const Users = () => {
   const handleAddUser = async () => {
     setEditingUser(null);          // No hay usuario seleccionado
     setFormData({ name: "", email: "", password: "" });
-    setIsModalOpen(true);
+    handleOpenModal();    
     /*const newUser = { name, email, password };
     const created = await createUser(newUser);
     setUsers([...users, { ...newUser, _id: created.id }]);
@@ -131,6 +131,12 @@ export const Users = () => {
     fetchUsers();          // refrescar lista
   };
 
+  // Abre el modal
+  const handleOpenModal = () => setIsModalOpen(true);
+
+  // Cierra el modal
+  const handleCloseModal = () => setIsModalOpen(false);
+
   if (isLoading) return <div className="loader"></div>;
   if (error) return <p>Error: {error}</p>;
 
@@ -157,14 +163,14 @@ export const Users = () => {
       <div>
         <Modal
           isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          onClose={handleCloseModal}
           title={editingUser ? "Editar Usuario" : "Agregar Usuario"}
         >
           <UserForm
             formData={formData}
             setFormData={setFormData}
             onSubmit={handleSubmit}
-            onCancel={() => setIsModalOpen(false)}
+            onCancel={handleCloseModal}
           />
           {/* <form onSubmit={() => alert('submit')}>
             <div>

@@ -162,3 +162,12 @@
   opacity: 0.9;
   transform: scale(1.05);
 }
+
+/* === Corrección para evitar bloqueo de la UI === */
+.nmda-modal-overlay.fade-in {
+  pointer-events: all; /* Permite clics cuando el modal está visible */
+}
+
+.nmda-modal-overlay.fade-out {
+  pointer-events: none; /* Desactiva clics cuando el modal se está ocultando */
+}

@@ -3,18 +3,14 @@ import "./Modal.css";
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   const [visible, setVisible] = useState(isOpen);
-
+  
   useEffect(() => {
-    if (isOpen) {
-      setVisible(true); // mostrar cuando se abre
-    }
+    if (isOpen) setVisible(true);
   }, [isOpen]);
 
   const handleClose = () => {
-    setVisible(false); // activar fadeOut
-    setTimeout(() => {
-      onClose(); // desmontar después de la animación
-    }, 300); // mismo tiempo que la animación
+    setVisible(false);
+    setTimeout(onClose, 150); // espera la animación
   };
 
   if (!isOpen && !visible) return null;

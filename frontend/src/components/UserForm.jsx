@@ -9,10 +9,9 @@ export const UserForm = ({ formData, setFormData, onSubmit, onCancel }) => {
     }
   };
 
-  const handleCancel = () => {
-    if (onCancel) {
-      onCancel();
-    }
+  const handleCancel = (e) => {
+    e.preventDefault();
+    if (onCancel) onCancel(); // cierre desde el padre
   };
 
   const handleChange = (e) => {
