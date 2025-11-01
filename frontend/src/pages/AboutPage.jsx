@@ -1,6 +1,9 @@
+import { Container } from "../components/ui"
 
 export const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <Container size="lg">
+      <h2 className="text-white">AboutPage</h2>
+    </Container>
   )
 }

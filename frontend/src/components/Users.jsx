@@ -8,7 +8,7 @@ import { useUser } from '../hooks/Users/useUser'
 import { UserTable } from '../components/UserTable'
 import { UserForm } from "../components/UserForm";
 
-import { Button, Modal } from '../components/ui'
+import { Button, Container, Modal } from '../components/ui'
 import { userService } from '../api/services/userService'
 import { useToast } from "../components/ui/Toast/ToastContext";
 
@@ -141,8 +141,8 @@ export const Users = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className='container'>
-      <h2 className='text-2xl'>Catálogo de Usuarios</h2>
+    <Container>
+      <h2 className='text-2xl text-black dark:text-text'>Catálogo de Usuarios</h2>
       <hr className="border-0 h-[2px] bg-gradient-to-r from-[#EC5C2C] to-[#F18C6B] my-6 rounded-sm max-w-full opacity-80" />
 
       <Button variant='primary' onClick={handleAddUser}>Agregar</Button>
@@ -231,6 +231,6 @@ export const Users = () => {
         ))}
       </ul> */}
 
-    </div>
+    </Container>
   )
 }

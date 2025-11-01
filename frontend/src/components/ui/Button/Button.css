@@ -1,4 +1,4 @@
-.nmda-button {
+/*.nmda-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Variantes */
 .nmda-button.default {
   background: #f9f9f9;
   color: #29285A;
@@ -31,22 +30,19 @@
   border-color: #EC5C2C;
 }
 
-/* Hover */
 .nmda-button:not(.disabled):hover {
   opacity: 0.9;
   transform: scale(1.03);
 }
 
-/* Disabled */
 .nmda-button.disabled {
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-/* Icono */
 .button-icon {
   display: inline-flex;
   margin-right: 0.5rem;
   font-size: 1rem;
-}
+}*/
